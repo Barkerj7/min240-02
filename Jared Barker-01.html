@@ -3,10 +3,11 @@
 <style>
     body{
         background-image:url(https://barkerj7.github.io/min240-02/JaredBarkerWireframe-01.jpg);
-        width:100vw;
-        height:100vh;
+        width:100vmin;
+        height:100vmin;
         background-size:cover;
     background-repeat: no-repeat;
+        margin: 0;
     }
 #title{
     position: absolute;
@@ -17,28 +18,30 @@
         height: 10vh;
     Border: solid black 2px;
     margin:0px;
-    background-color:lightcoral;
+    background-image: linear-gradient(lightcoral, grey);
     font-family: 'Rock Salt', cursive;
-    font-size:20;
+    font-size:1vw;
+    transform: scale(2vw);
     }
 #para{
-       background-color: gray;
+       background-image: linear-gradient(lightcoral, grey);
     position: absolute;
-    left: .6vw;
-    top: 15vh;
-        width: 98vw;
+    left: 1vw;
+    top: 17vh;
+        width: 95vw;
         height: 15vh;
      Border: solid black 2px;
      margin:5px;
+    font-size:1vw;
     font-family:cursive;
     }
 #favObject{
         background-image: url("https://secure.img1-fg.wfcdn.com/im/06173646/resize-h600-w600%5Ecompr-r85/3881/38818216/Beds.jpg");
         position: absolute;
-        left: 2vw;
+        left: 5vw;
         top: 35vh;
-        width: 33vw;
-        height: 60vh;
+        width: 25vw;
+        height: 55vh;
         background-size:cover;
     background-repeat: no-repeat;
      Border: solid black 2px;
@@ -51,8 +54,8 @@
     position: absolute;
     left: 38vw;
     top: 35vh;
-    width: 27vw;
-    height: 60vh;
+    width: 25vw;
+    height: 55vh;
      Border: solid black 2px;
      
     }  
@@ -62,31 +65,34 @@
         background-repeat: no-repeat;
         position: absolute;
         left: 69.5vw;
-        top: 35vh;
-        width: 29vw;
-        height: 60vh;
+        top: 38vh;
+        width: 25vw;
+        height: 55vh;
         Border: solid white 2px;
-    overflow: auto;
+    overflow: hidden;
     } 
     #bottom{
         position: absolute;
-        top:91vh;
+        top:97vh;
+        left: 1vw;
         text-align: center;
-        width: 98vw;
+        width: 95vw;
         height: 5vh;
         Border: solid black 2px;
          margin:5px;
-        background-color:lightcoral;
+        background-image: linear-gradient(lightcoral, grey);
+        filter: opacity(.85);
     }
 </style>
 <body>
-<div id="title"><h2>Jared's Favorite Things</h2></div>
+<div id="title"><h2>Jared's Favorites</h2></div>
 <div id="para">A bit about myself: There are few things I enjoy about this world. I am a car enthusiast as I see all cars as an art form. Another thing I enjoy is memes. They bring me alot of joy and open my mind up to creativity as all memes have their differences.  I feel as if they represent the new artform in the 21st century. And finally, I enjoy gaming. This media has opened my eyes to new worlds that were only someone's imagination. To play in these worlds is just an adventure that most don't experience.</div>
 <div id="favObject"></div> 
 <div id="favGame"></div> 
-    <div id ="favMovie"><iframe width = "550vw" height = "585vh" src = "https://www.youtube.com/embed/k_13fFIrhPk" frameborder="0" allowfullscreen></iframe></div>
-<div id="bottom"><i>Copyright Jared Barker February 5th, 2019</i><br>
-    Images from:  <i>img1-fg.wfcdn.com, Pinimg.com, and Amazon.com</i>   
+    <div id ="favMovie"><iframe width = "500vw" height = "550vh" src = "https://www.youtube.com/embed/k_13fFIrhPk" frameborder="0" allowfullscreen ></iframe></div>
+<div id="bottom">
+    Images from:  <i>img1-fg.wfcdn.com, Pinimg.com, and Amazon.com</i><br>
+    <i>Copyright Jared Barker February 5th, 2019</i>
 </div>    
 </body>
 </html>

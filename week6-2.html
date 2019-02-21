@@ -1,0 +1,33 @@
+<html>
+<head></head>
+<style>
+    #box{
+        position: absolute;
+        top: 50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        width: 10vmin;
+        height: 10vmin;
+        background-color: red;
+    }
+</style>
+<body>
+<div id="box"></div>
+<script>
+    var myBox;
+    myBox = document.querySelector("#box");
+    myBox.addEventListener("mouseover",  doThis, false);
+    myBox.addEventListener("mouseout",  doThisBack, false);
+    function doThis(){
+        // do something - 
+        myBox.style.borderRadius = "50%";
+        myBox.style.backgroundColor = "blue";
+        
+    }
+    function doThisBack(){
+        myBox.style.borderRadius = "0%";
+        myBox.style.backgroundColor = "red";
+    }
+</script>
+</body>
+</html>

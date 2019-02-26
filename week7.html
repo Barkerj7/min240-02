@@ -1,0 +1,99 @@
+<html>
+<head></head>
+<style>
+    #startScreen{
+        position: absolute;
+        top:30vh;
+        left:10vw;
+        width: 80vw;
+        height: 40vh;
+        background-color: olivedrab;
+        /* display: none; /* block */
+    }
+    #gameScreen{
+        position: absolute;
+        top:5vh;
+        left:5vw;
+        width: 90vw;
+        height: 90vh;
+        background-color: lightgrey;
+        display: none;
+    }
+    #endScreen{
+        position: absolute;
+        top:30vh;
+        left:10vw;
+        width: 80vw;
+        height: 40vh;
+        background-color: black;
+        display: none;
+    }
+    #startBTN{
+        position: absolute;
+        top:30%;
+        left:10%;
+        width: 80%;
+        height: 40%;
+        background-color: yellow;
+        cursor: pointer;
+        user-select: none;
+    }
+    #wateringCan{
+        position: absolute;
+        top:30%;
+        left:50%;
+        width: 10%;
+        height: 10%;
+        background-color: blue;
+        cursor: pointer;
+        user-select: none;
+    }
+    #flowerTop{
+        position: absolute;
+        top:30%;
+        left:20%;
+        width: 10%;
+        height: 10%;
+        background-color: deeppink;
+        user-select: none;
+        border-radius: 50%;
+    }
+</style>
+<body>
+<div id="startScreen">
+    <div id="startBTN"> start </div>
+</div>
+<div id="gameScreen">
+    <div id="wateringCan"></div>
+    <div id="flowerTop"></div>
+</div>
+<div id="endScreen"></div>     
+<script>
+    var myStartScreen;
+    myStartScreen = document.querySelector("#startScreen");
+    var myGameScreen;
+    myGameScreen = document.querySelector("#gameScreen");
+    var myStartBTN;
+    myStartBTN = document.querySelector("#startBTN");
+    myStartBTN.style.fontSize = "3em";
+    myStartBTN.style.textAlign = "center";
+    myStartBTN.addEventListener("click", hideStartShowGame, false);
+    //exit button!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    var myWateringCan;
+    myWateringCan = document.querySelector("#wateringCan");
+    var myFlowerTop;
+    myFlowerTop = document.querySelector("#flowerTop");
+    myWateringCan = addEventListener("click", growFlower, false);
+    var myPositionY = 0;
+    function growFlower(){
+        myPositionY = myPositionY - 20;
+        myFlowerTop.style.transform = "translateY("+myPositionY+"%)";
+        // myFlowTop.style.transform = 'translateY(${myPositonY}%);' is also right
+    }
+    function hideStartShowGame(){
+        myStartScreen.style.display = "none";
+        myGameScreen.style.display = "block";
+    }
+</script>
+</body>
+</html>

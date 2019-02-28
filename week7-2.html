@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head></head>
+<style>
+    #springVideo{
+        position: absolute;
+        top:0;
+        left:0;
+        height: 100vh;
+    }
+    #playPauseBTN{
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        height: 2em;
+        width: 20vw;
+        font-size: 2em;
+        border: 1px solid white;
+        text-align: center;
+        background-color: black;
+        color: white;
+        font-family: sans-serif;
+        user-select: none;
+        cursor: pointer;
+    }
+</style>
+<body>
+<video id="springVideo" loop
+       src="https://media.gettyimages.com/videos/new-life-growing-seed-timelapse-video-id846455928?s=640_adpp"></video>
+<div id="playPauseBTN">Play</div>
+<script>
+    var myVideo;
+    myVideo = document.querySelector("#springVideo");
+    var myBTN;
+    myBTN = document.querySelector("#playPauseBTN");
+    var videoPlaying  = 0;
+    myBTN.addEventListener("click", playVideo, false);
+    function playVideo(){
+        if(videoPlaying === 0){
+        myVideo.play();
+        videoPlaying = 1;
+        myBTN.innerHTML = "pause";
+        }
+        else{
+        myVideo.pause();
+        videoPlaying = 0;
+        myBTN.innerHTML = "play";
+    }
+    }
+
+</script>
+</body>
+</html>

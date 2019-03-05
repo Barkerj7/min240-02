@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+    <head><link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"></head>
+<style>
+    .material-icons.md-300 { font-size: 80vmin; }
+</style>
+<body>
+    <audio loop id="hiphop" src="./Music2.mp3"></audio>
+    <i id="playICON" class="material-icons md-300"> play_circle_filled</i>
+</body>
+<script>
+    var myMusic = document.querySelector("#hiphop");
+    myMusic.load();
+    var myPlayICON = document.querySelector("#playICON");
+    myPlayICON.addEventListener("click", playMusic, false);
+    window.addEventListener("focus", playLoud, false);
+    window.addEventListener("blur", playSoft, false);
+    var playForte = 1;
+    function playMusic(){
+         myMusic.play();
+    }
+    function playLoud(){
+        if(playForte === 0){
+        myMusic.volume = 1;
+        playForte = 1;
+        }
+        else{
+            myMusic.volume = 1;
+        }
+    }
+    function playSoft(){
+        if(playForte === 1){
+        myMusic.volume = 0.2;
+        playForte = 0;
+        }
+        else{
+            myMusic.volume = 0;
+        }
+    }
+    //https://material.io/tools/icons/?style=baseline
+</script>
+</html>

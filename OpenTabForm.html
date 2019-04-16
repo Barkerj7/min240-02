@@ -28,7 +28,7 @@ if (document.forms[0].userAge.value < 1)
       return false;
    } 
 
-if (document.forms[0].userAge.value < 18)
+if (document.forms[0].userAge.value < 21)
    {
       alert("Age is less than 18. You are not an adult");
       return false;
@@ -42,7 +42,7 @@ if (document.forms[0].userAge.value < 18)
 </script>	
 </head>
 <body>
-<h2>JavaScript Form Handling</h2>
+<h2>OpenTab Registration</h2>
 <form method="post" action="http://webdevfoundations.net/scripts/formdemo.asp" onsubmit="return validateForm( );">
  <div>
     <label for="userName">Name:</label>
@@ -51,6 +51,14 @@ if (document.forms[0].userAge.value < 18)
  <div>
     <label for="userAge">Age:</label>
     <input type="text" name="userAge" id="userAge">
+ </div>
+ <div>
+    <label for="userNum">Number (This will be used to notify if given.):</label>
+    <input type="text" name="userNum" id="userNum">
+ </div>
+ <div>
+    <label for="userLoc">Area You Want To Meet In.:</label>
+    <input type="text" name="userLoc" id="userLoc">
  </div>
  <div>
     <input type="submit" value="Send information">

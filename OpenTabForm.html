@@ -4,8 +4,9 @@
 <title>OpenTab Registration</title>
 <meta charset="utf-8">
 <style type="text/css">
-div {padding-bottom:10px; width:250px; text-align:right; }
-label {padding-right:5px; }
+    body{text-align:center;}
+div {padding-bottom:10px; width:25%; text-align:center; }
+label {padding-right:50vmin; }
 </style>
 <script type="text/javascript">
 function validateForm()
@@ -23,10 +24,9 @@ if (document.forms[0].userAge.value < 1)
       alert("Your age input is not correct!");
       return false;
    } 
-
 if (document.forms[0].userAge.value < 21)
    {
-      alert("Age is less than 18. You are not an adult");
+      alert("Age is less than 21. You cannot participate in OpenTab. Sorry ;(");
       return false;
    } 
    alert("Name and Age are valid.");
@@ -47,11 +47,11 @@ if (document.forms[0].userAge.value < 21)
     <input type="text" name="userAge" id="userAge">
  </div>
  <div>
-    <label for="userNum">Number (This will be used to notify if given.):</label>
+    <label for="userNum">Number:</label>
     <input type="text" name="userNum" id="userNum">
  </div>
  <div>
-    <label for="userLoc">Area You Want To Meet In:</label>
+    <label for="userLoc">Area:</label>
     <input type="text" name="userLoc" id="userLoc">
  </div>
  <div>
